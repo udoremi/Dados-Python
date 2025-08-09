@@ -29,5 +29,3 @@ df['remoto'] = df['remoto'].replace({
 })
 
 df.to_csv('dados_imersao_corrigidos.csv', index=False)
-
-print("Arquivo com ortografia corrigida salvo como 'dados_corrigidos.csv'")
