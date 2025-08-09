@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide",
 )
 
-df = pd.read_csv("https://github.com/udoremi/Dados-Python/raw/refs/heads/main/dados_imersao_corrigidos.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/udoremi/Dados-Python/refs/heads/main/dados_imersao_corrigidos.csv")
 
 st.sidebar.header("🔍 Filtros")
 
