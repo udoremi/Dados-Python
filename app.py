@@ -120,5 +120,29 @@ with col_graf4:
     else:
         st.warning("Nenhum dado para exibir no gráfico de países.")
 
+# meu gráfico feito no último exercício
+col_graf5 = st.columns(1)[0]
+
+with col_graf5:
+    if not df_filtrado.empty:
+        df_data_scientist = df_filtrado[df_filtrado['cargo'] == 'Data Scientist']
+        df_salario_pais_ds = df_data_scientist.groupby('empresa')['usd'].mean().reset_index()
+        grafico_barra_paises = px.bar(
+            df_salario_pais_ds,
+            x='empresa',
+            y='usd',
+            title='Média Salarial de Cientistas de Dados por País (USD)',
+            labels={
+                'empresa': 'País',
+                'usd': 'Média Salarial Anual em USD'
+            }
+        )
+        grafico_barra_paises.update_layout(title_x=0.1)
+        st.plotly_chart(grafico_barra_paises, use_container_width=True)
+    else:
+        st.warning("Nenhum dado para exibir no gráfico de salário por país.")
+
+
+
 st.subheader("Dados Detalhados")
 st.dataframe(df_filtrado)
