@@ -9,7 +9,7 @@ df['senioridade'] = df['senioridade'].replace({
     'executivo': 'Executivo'
 })
 
-df['contrato'] = df['contrato'].replace({
+df['tipo_contrato'] = df['tipo_contrato'].replace({
     'integral': 'Integral',
     'contrato': 'Contrato',
     'freelancer': 'Freelancer',
