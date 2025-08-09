@@ -5,20 +5,15 @@ df = pd.read_csv("https://raw.githubusercontent.com/vqrca/dashboard_salarios_dad
 df['senioridade'] = df['senioridade'].replace({
     'senior': 'Sênior',
     'pleno': 'Pleno',
-    'junior': 'Júnior'
+    'junior': 'Júnior',
+    'executivo': 'Executivo'
 })
 
 df['contrato'] = df['contrato'].replace({
     'integral': 'Integral',
-    'meio-periodo': 'Meio Período',
-    'freelance': 'Freelance',
-    'temporario': 'Temporário'
-})
-
-df['tamanho_empresa'] = df['tamanho_empresa'].replace({
-    'media': 'Média',
-    'grande': 'Grande',
-    'pequena': 'Pequena'
+    'contrato': 'Contrato',
+    'freelancer': 'Freelancer',
+    'parcial': 'Parcial'
 })
 
 df['tamanho_empresa'] = df['tamanho_empresa'].replace({
